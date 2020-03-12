@@ -36,7 +36,6 @@
 	<dependencies>
 
 		<!-- ************************* Dependências do Spring ************************* -->
-
 		<!-- Spring Core: Contém as estruturas fundamentais do Spring. As outras 
 			bibliotecas do spring utilizam estruturas que estão nessa -->
 		<dependency>
