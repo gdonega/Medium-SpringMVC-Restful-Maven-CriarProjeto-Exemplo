@@ -29,34 +29,72 @@
 
 	<properties>
 		<spring.version>5.2.4.RELEASE</spring.version>
+		<jackson.databind.version>2.10.3</jackson.databind.version>
+		<javax.servletapi.version>3.1.0</javax.servletapi.version>
 	</properties>
 
 	<dependencies>
+
+		<!-- ************************* Dependências do Spring ************************* -->
+
+		<!-- Spring Core: Contém as estruturas fundamentais do Spring. As outras 
+			bibliotecas do spring utilizam estruturas que estão nessa -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+
+		<!-- Spring Context: Tem o container de injeção de depencia do Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<!-- Spring AOP: Habilita opções relacionadas à arquitetura dos projetos. 
+			Saiba mais: https://www.baeldung.com/spring-aop -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<!-- Spring WebMVC: Suporte Model-View-Controller e ao Rest Web Services -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<!-- Spring Web: Integração com o Http -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<!-- ************************* Dependências do Jackson ************************* -->
+		<!-- Jackson Databind: Faz conversão de Json para Objeto e vice-versa. 
+			É necessário importar essa lib, pois o Spring a utiliza para fazer as conversões. -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.databind.version}</version>
+		</dependency>
+
+
+		<!-- ************************* Dependências do Javax Servelet API ************************* -->
+		<!-- Javax Servelet API: Define classes e interfaces relacionadas ao Servelets. 
+			A utilizamos, por exemplo, para fazer filtros -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servletapi.version}</version>
+		</dependency>
 	</dependencies>
+
+
 
 </project>
